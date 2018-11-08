@@ -1,3 +1,5 @@
+
+<div class="container new-room">
 <h1>Add a Room</h1>
 	<ul>
 		<% @room.errors.full_messages.each do |error| %>
@@ -5,16 +7,8 @@
 		<% end %>
 	</ul>
 
-	<%= form_for @room do |f| %>
-		<%= f.label :room_name %>
-		<%= f.text_field :room_name %>
-		<br>
-		<%= f.label :description %>
-		<%= f.text_field :description %>
-		<br>
-		<%= f.submit %>
-	<% end %>
-
+	<%= render 'form' %>
+</div>
 
 
 

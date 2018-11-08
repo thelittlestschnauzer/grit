@@ -1,0 +1,15 @@
+<div class="container main-rooms-list">
+
+	<h1>List of Rooms</h1>
+
+	<div class="rooms">
+		<ul>
+		 <% @rooms.each do |room| %>
+		  <li>
+		  	<label><%= room.room_name %> | <%= room.description %></label>
+		  	</li>
+
+		 <% end %>
+		 </ul>
+	</div>
+</div>
