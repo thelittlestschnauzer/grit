@@ -20,13 +20,17 @@ class RoomsController < ApplicationController
 	end 
 
 	def edit
-		
 	end 
 
 	def show
 	end 
 
 	def update
+		if @room.update_attributes(room_params)
+			redirect_to rooms_path(@room)
+		else 
+			render :edit
+		end 
 	end 
 
 
