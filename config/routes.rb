@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :rooms
   root to: 'home#index'
   
   devise_for :users, path: 'auth', path_names: { sign_in: 'login', 
